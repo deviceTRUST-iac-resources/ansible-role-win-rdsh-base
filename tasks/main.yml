@@ -9,7 +9,6 @@
   register: rds_lic_feature
   when: 
     - install_rds_licensing
-    - ansible_facts['distribution'] is search('Windows Server')
 
 - name: REGEDIT - User based RDS-Licensing
   win_regedit:
@@ -33,8 +32,6 @@
     include_sub_features: yes
     include_management_tools: yes
   register: rdsh_feature
-  when:
-    - ansible_facts['distribution'] is search('Windows Server')
 
 - name: REGEDIT - LicenseServer name
   win_regedit:
