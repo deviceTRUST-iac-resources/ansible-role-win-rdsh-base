@@ -1,1 +1,1 @@
-# ansible-r-win-srv-rdsh-base
+# ansible-role-win-srv-rdsh-base
